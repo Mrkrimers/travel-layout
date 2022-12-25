@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(./font/Inter-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./font/Inter-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./font/Inter-Medium.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./font/Inter-Regular.ttf) format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./font/Inter-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url(./font/PlayfairDisplay-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+$white-color: #FFFFFF;
+$orange-color: #FB8F1D;
+$grey-color: #B8BECD;
+$black-color: #202336;
+$darkgrey-color: #4A4C53;
+
+%flex-spb {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+* {
+    margin: 0;    
+    padding: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1200px;
+    margin: auto;
+}
+
+
+header {
+    @extend %flex-spb;
+    align-items: center;
+    padding: 10px 0;
+
+    .img-logo {
+        background-image: url(./assets/logo.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 41px;
+        height: 41px;
+    }
+
+    nav {
+        @extend %flex-spb;
+        align-items: center;
+
+        p {
+            margin-right: 35px;
+            font: 500 16px 'Inter';
+            color: #202336;
+
+            &:hover {
+                color: $black-color;
+            }
+        }
+
+        div:not(:last-child) {
+            margin-right: 18px;
+        }
+
+        .login-btn {
+            border: 1px solid $orange-color;
+            border-radius: 8px;
+            font: 500 15px 'Inter';
+            color: $orange-color;
+            padding: 8px 46px;
+        }
+
+        .registre-btn {
+            background: $orange-color;
+            border-radius: 8px;
+            font: 500 15px 'Inter';
+            color: $white-color;
+            padding: 8px 36px;
+        }
+
+
+    }
+
+
+}
+
+
+
+.preview {
+    @extend %flex-spb;
+    align-items: center;
+    margin-top: 100px;
+
+    .travel-form {
+        width: 500px;
+
+        h1 {
+            font: 700 64px 'Playfair Display';
+            color: $black-color;
+        }
+
+        p {
+            font: 600 22px 'Inter';
+            color: $black-color;
+            margin: 50px 0;
+        }
+
+        .inputs-form {
+            display: flex;
+            flex-wrap: wrap;
+
+            div {
+                margin-bottom: 30px;
+
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+
+
+            input {
+                width: 210px;
+                height: 52px;
+                border: 0.8px solid $grey-color;
+                border-radius: 6px;
+                padding-left: 20px;
+                outline: none;
+
+                &::placeholder {
+                    font-family: 400 15px 'Inter';
+                    color: $darkgrey-color;
+                }
+
+            }
+
+        }
+
+        .btn {
+            background: $orange-color;
+            border-radius: 8px;
+            width: 180px;
+            text-align: center;
+            padding: 15px 0;
+
+            font: 700 17px 'Inter';
+            color: $white-color;
+        }
+
+
+    }
+
+    .img-travel {
+        background-image: url(./assets/thousand-01\ 1.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 506px;
+        height: 483px;
+    }
+
+
+
+}

@@ -1,264 +1,172 @@
 @font-face {
-    font-family: 'Playfair Display';
-    src: url(./font/PlayfairDisplay-Bold.ttf) format('truetype');
+  font-family: "Inter";
+  src: url(./font/Inter-Bold.ttf) format("truetype");
+  font-weight: 700;
 }
-
 @font-face {
-    font-family: 'Inter';
-    src: url(./font/Inter-Light.ttf) format('truetype');
-    font-weight: 300;
+  font-family: "Inter";
+  src: url(./font/Inter-Light.ttf) format("truetype");
+  font-weight: 300;
 }
-
 @font-face {
-    font-family: 'Inter';
-    src: url(./font/Inter-Bold.ttf) format('truetype');
-    font-weight: 700;
+  font-family: "Inter";
+  src: url(./font/Inter-Medium.ttf) format("truetype");
+  font-weight: 400;
 }
-
 @font-face {
-    font-family: 'Inter';
-    src: url(./font/Inter-Medium.ttf) format('truetype');
-    font-weight: 500;
+  font-family: "Inter";
+  src: url(./font/Inter-Regular.ttf) format("truetype");
+  font-weight: 500;
 }
-
 @font-face {
-    font-family: 'Inter';
-    src: url(./font/Inter-Regular.ttf) format('truetype');
-    font-weight: 400;
+  font-family: "Inter";
+  src: url(./font/Inter-SemiBold.ttf) format("truetype");
+  font-weight: 600;
 }
-
 @font-face {
-    font-family: 'Inter';
-    src: url(./font/Inter-SemiBold.ttf) format('truetype');
-    font-weight: 600;
+  font-family: "Playfair Display";
+  src: url(./font/PlayfairDisplay-Bold.ttf) format("truetype");
+  font-weight: 700;
 }
-
-
+.preview, header nav, header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 
 * {
-    font-family: 'Inter';
-    font-style: normal;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+  font-style: normal;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-    width: 1040px;
-    margin: auto;
-    background: white;
+  width: 1200px;
+  margin: auto;
 }
-
-/* work with header */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 1040px;
-    margin: 0 auto;
-    padding: 40px 0;
-    text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
 }
-
 header .img-logo {
-    background-image: url(./assets/logo.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 41px;
-    height: 41px;
-    flex: 0.5;
+  background-image: url(./assets/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 41px;
+  height: 41px;
 }
-
 header nav {
-    flex: 0.5;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
 header nav p {
-    font: 500 16px 'Inter';
-    color: #202336;
+  margin-right: 35px;
+  font: 500 16px "Inter";
+  color: #202336;
+}
+header nav p:hover {
+  color: #202336;
+}
+header nav div:not(:last-child) {
+  margin-right: 18px;
+}
+header nav .login-btn {
+  border: 1px solid #FB8F1D;
+  border-radius: 8px;
+  font: 500 15px "Inter";
+  color: #FB8F1D;
+  padding: 8px 46px;
+}
+header nav .registre-btn {
+  background: #FB8F1D;
+  border-radius: 8px;
+  font: 500 15px "Inter";
+  color: #FFFFFF;
+  padding: 8px 36px;
 }
 
-header nav p:not( :first-child) {
-    font: 400 16px 'Inter';
-    color: #B8BECD;
+.preview {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
 }
-
-header .btn-one {
-    border: 1px solid #FB8F1D;
-    border-radius: 8px;
-    font: 500 15px 'Inter';
-    color: #FB8F1D;
-    text-align: center;
-    padding: 8px 46px;
+.preview .travel-form {
+  width: 500px;
 }
-
-header .btn-two {
-    background: #FB8F1D;
-    border-radius: 8px;
-    font: 500 15px 'Inter';
-    color: #FFFFFF;
-    text-align: center;
-    padding: 8px 36px;
-    margin-left: 20px;
+.preview .travel-form h1 {
+  font: 700 64px "Playfair Display";
+  color: #202336;
 }
-
-/* work with main */
-
-.explore {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 200px;
+.preview .travel-form p {
+  font: 600 22px "Inter";
+  color: #202336;
+  margin: 50px 0;
 }
-
-.explore .img-explore {
-    background-image: url(./assets/thousand-01\ 1.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 506px;
-    height: 483px;
+.preview .travel-form .inputs-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-
-
-.explore .box .introductory {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
+.preview .travel-form .inputs-form div {
+  margin-bottom: 30px;
 }
-
-
-.explore .box .introductory h1 {
-    font: 700 64px 'Playfair Display';
-    color: #202336;
-    margin: 0 0 70px;
-    width: 356px;
+.preview .travel-form .inputs-form div:not(:last-child) {
+  margin-right: 30px;
 }
-
-.explore .box .introductory p {
-    font: 600 22px 'Inter';
-    color: #202336;
-    margin-bottom: 70px;
+.preview .travel-form .inputs-form input {
+  width: 210px;
+  height: 52px;
+  border: 0.8px solid #B8BECD;
+  border-radius: 6px;
+  padding-left: 20px;
+  outline: none;
 }
-
-
-/* input */
-
-.explore .box .enter {
-    display: grid;
-    grid-template: 52px 52px / 220px 220px;
-    grid-column-gap: 35px;
-    grid-row-gap: 30px;
+.preview .travel-form .inputs-form input::-webkit-input-placeholder {
+  font-family: 400 15px "Inter";
+  color: #4A4C53;
 }
-
-.explore .box .enter input {
-    border: 0.8px solid #AFB0B9;
-    border-radius: 6px;
-    font: 400 15px 'Inter';
-    color: #4A4C53;
-    text-align: start;
-    padding-left: 30px;
+.preview .travel-form .inputs-form input::-moz-placeholder {
+  font-family: 400 15px "Inter";
+  color: #4A4C53;
 }
-
-/* кнопка 1 */
-.explore .box .btn {
-    background: #FB8F1D;
-    border-radius: 8px;
-    font: 700 17px 'Inter';
-    color: #FFFFFF;
-    text-align: center;
-    padding: 15px 0;
-    width: 180px;
-    margin-top: 51px;
+.preview .travel-form .inputs-form input:-ms-input-placeholder {
+  font-family: 400 15px "Inter";
+  color: #4A4C53;
 }
-
-.travel {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-
+.preview .travel-form .inputs-form input::-ms-input-placeholder {
+  font-family: 400 15px "Inter";
+  color: #4A4C53;
 }
-
-.travel .img-travel {
-    background-image: url(./assets/Thousand-02\ 2.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 659px;
-    height: 534px;
+.preview .travel-form .inputs-form input::placeholder {
+  font-family: 400 15px "Inter";
+  color: #4A4C53;
 }
-
-.travel .box2 {
-    flex: 50%;
-    padding-left: 50px;
+.preview .travel-form .btn {
+  background: #FB8F1D;
+  border-radius: 8px;
+  width: 180px;
+  text-align: center;
+  padding: 15px 0;
+  font: 700 17px "Inter";
+  color: #FFFFFF;
 }
-
-.travel .box2 h1 {
-    font: 700 36px 'Playfair Display';
-    color: #000000;
-    padding: 50px 0 20px;
-}
-
-.travel .box2 p {
-    font: 300 17px 'Inter';
-    color: #7D7987;
-}
-
-/* кнопка 2 */
-.travel .box2 .btn {
-    background: #FB8F1D;
-    border-radius: 8px;
-    font: 700 17px 'Inter';
-    color: #FFFFFF;
-    text-align: center;
-    padding: 15px 0;
-    width: 180px;
-    margin-top: 40px;
-}
-
-
-/* footer */
-footer {
-    background: #F9F9FB;
-    display: flex;
-    justify-content: space-between;
-}
-
-footer .marker {
-    width: 400px;
-}
-
-footer .marker .img-logo {
-    background-image: url(./assets/logo.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 44px;
-    height: 38px;
-}
-
-footer .marker p {
-    font: 300 18px 'Inter';
-    color: #848484;
-    padding: 10px 0 15px;
-}
-
-
-footer nav {
-    width: 600px;
-    display: flex;
-    justify-content: space-between;
-}
-
-footer nav div p {
-    font: 700 19px 'Inter';
-    color: #000000;
-    padding: 5px 0;
-}
-
-footer nav div p:not(:first-child) {
-    font: 300 18px 'Inter';
-    color: #848484;
+.preview .img-travel {
+  background-image: url(./assets/thousand-01\ 1.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 506px;
+  height: 483px;
 }
