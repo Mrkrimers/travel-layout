@@ -39,6 +39,8 @@ $orange-color: #FB8F1D;
 $grey-color: #B8BECD;
 $black-color: #202336;
 $darkgrey-color: #4A4C53;
+$lightgrey-color: #7D7987;
+$footergrey-color: #F9F9FB;
 
 %flex-spb {
     display: flex;
@@ -47,7 +49,7 @@ $darkgrey-color: #4A4C53;
 
 
 * {
-    margin: 0;    
+    margin: 0;
     padding: 0;
     font-family: 'Inter';
     font-style: normal;
@@ -114,77 +116,214 @@ header {
 }
 
 
+main {
+    .preview {
+        @extend %flex-spb;
+        align-items: center;
+        margin-top: 100px;
 
-.preview {
-    @extend %flex-spb;
-    align-items: center;
-    margin-top: 100px;
+        .travel-form {
+            width: 500px;
 
-    .travel-form {
-        width: 500px;
+            h1 {
+                font: 700 64px 'Playfair Display';
+                color: $black-color;
+            }
 
-        h1 {
-            font: 700 64px 'Playfair Display';
-            color: $black-color;
-        }
+            p {
+                font: 600 22px 'Inter';
+                color: $black-color;
+                margin: 50px 0;
+            }
 
-        p {
-            font: 600 22px 'Inter';
-            color: $black-color;
-            margin: 50px 0;
-        }
+            .inputs-form {
+                display: flex;
+                flex-wrap: wrap;
 
-        .inputs-form {
-            display: flex;
-            flex-wrap: wrap;
+                div {
+                    margin-bottom: 30px;
 
-            div {
-                margin-bottom: 30px;
-
-                &:not(:last-child) {
-                    margin-right: 30px;
+                    &:not(:last-child) {
+                        margin-right: 30px;
+                    }
                 }
+
+
+                input {
+                    width: 210px;
+                    height: 52px;
+                    border: 0.8px solid $grey-color;
+                    border-radius: 6px;
+                    padding-left: 20px;
+                    outline: none;
+
+                    &::placeholder {
+                        font-family: 400 15px 'Inter';
+                        color: $darkgrey-color;
+                    }
+
+                }
+
+            }
+
+            .btn {
+                background: $orange-color;
+                border-radius: 8px;
+                width: 180px;
+                text-align: center;
+                padding: 15px 0;
+
+                font: 700 17px 'Inter';
+                color: $white-color;
             }
 
 
-            input {
-                width: 210px;
-                height: 52px;
-                border: 0.8px solid $grey-color;
-                border-radius: 6px;
-                padding-left: 20px;
-                outline: none;
+        }
 
-                &::placeholder {
-                    font-family: 400 15px 'Inter';
+        .img-travel {
+            background-image: url(./assets/thousand-01\ 1.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 506px;
+            height: 483px;
+        }
+
+    }
+
+
+
+
+    .travel {
+        @extend %flex-spb;
+        margin-top: 100px;
+
+        .img {
+            background-image: url(./assets/Thousand-02\ 2.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 660px;
+            height: 534px;
+        }
+
+        .about-travel {
+            width: 540px;
+            padding-left: 50px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+            .text {
+
+
+
+                h1 {
+                    font: 700 36px 'Playfair Display';
+                    color: $black-color;
+                    margin-top: 50px;
+                }
+
+                p {
+                    font: 300 17px 'Inter';
+                    color: $lightgrey-color;
+                    margin-top: 20px;
+                }
+            }
+
+            .btn {
+                background: $orange-color;
+                border-radius: 8px;
+                padding: 13px 0;
+                text-align: center;
+                width: 164px;
+                font: 600 16px 'Inter';
+                color: $white-color;
+            }
+
+        }
+
+
+
+    }
+
+
+}
+
+footer {
+    margin-top: 150px;
+    background-color: $footergrey-color;
+    @extend %flex-spb;
+
+
+    .copyright {
+        flex: 0.7;
+
+        .img-logo {
+            background-image: url(./assets/logo.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 40px;
+            height: 40px;
+        }
+
+        div {
+
+            p {
+                font: 300 17px 'Inter';
+                color: $darkgrey-color;
+                padding-top: 30px;
+            }
+
+
+
+        }
+
+    }
+
+
+
+    nav {
+        flex: 1;
+        @extend %flex-spb;
+        margin-left: 50px;
+
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            p {
+                font: 700 19px 'Inter';
+                color: $black-color;
+
+                &:not(:first-child) {
+                    font: 300 18px 'Inter';
                     color: $darkgrey-color;
                 }
 
             }
 
+
+
         }
 
-        .btn {
-            background: $orange-color;
-            border-radius: 8px;
-            width: 180px;
-            text-align: center;
-            padding: 15px 0;
 
-            font: 700 17px 'Inter';
-            color: $white-color;
-        }
+
+
+
+
+
+
 
 
     }
 
-    .img-travel {
-        background-image: url(./assets/thousand-01\ 1.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 506px;
-        height: 483px;
-    }
+
+
+
+
 
 
 
